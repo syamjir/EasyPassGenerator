@@ -4,11 +4,20 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>SafePass</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <header>
+    <header class="container">
       <nav>
-        <ion-icon name="menu-outline" class="menu-icon"></ion-icon>
+        <ion-icon
+          name="menu-outline"
+          class="menu-icon"
+          aria-label="Menu"
+        ></ion-icon>
         <h2 class="header-nav">SafePass</h2>
         <button class="nav-copy-btn">Copy password</button>
       </nav>
@@ -28,11 +37,21 @@
           placeholder="SafePass here..."
           readonly
         />
-        <ion-icon name="copy-outline" class="copy-icon"></ion-icon>
-        <ion-icon name="create-outline" class="create-icon"></ion-icon>
+        <div>
+          <ion-icon
+            name="copy-outline"
+            class="copy-icon"
+            aria-label="Copy"
+          ></ion-icon>
+          <ion-icon
+            name="create-outline"
+            class="create-icon"
+            aria-label="Create"
+          ></ion-icon>
+        </div>
       </div>
       <div class="options">
-        <h2 class="options-heading">Custamize your password</h2>
+        <h2 class="options-heading">Customize your password</h2>
         <div class="range-control">
           <label for="length" class="range-label">Password length</label>
           <div class="range">
@@ -53,16 +72,16 @@
             <label for="uppercase" class="checkbox-label">Uppercase</label>
           </div>
           <div class="checkbox-container">
-            <input type="checkbox" id="uppercase" class="checkbox" checked />
-            <label for="uppercase" class="checkbox-label">Lowercase</label>
+            <input type="checkbox" id="lowercase" class="checkbox" checked />
+            <label for="Lowercase" class="checkbox-label">Lowercase</label>
           </div>
           <div class="checkbox-container">
-            <input type="checkbox" id="uppercase" class="checkbox" checked />
-            <label for="uppercase" class="checkbox-label">Numbers</label>
+            <input type="checkbox" id="numbers" class="checkbox" checked />
+            <label for="Numbers" class="checkbox-label">Numbers</label>
           </div>
           <div class="checkbox-container">
-            <input type="checkbox" id="uppercase" class="checkbox" checked />
-            <label for="uppercase" class="checkbox-label">Symbols</label>
+            <input type="checkbox" id="symbols" class="checkbox" checked />
+            <label for="Symbols" class="checkbox-label">Symbols</label>
           </div>
         </div>
       </div>
