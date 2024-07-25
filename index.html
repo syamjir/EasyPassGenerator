@@ -12,6 +12,10 @@
   </head>
   <body>
     <header class="container">
+      <div class="menu-bar hidden">
+        <a href="#" class="create-pass">Create pass</a>
+        <a href="#" class="footer-link">Footer</a>
+      </div>
       <nav>
         <ion-icon
           name="menu-outline"
@@ -73,15 +77,15 @@
           </div>
           <div class="checkbox-container">
             <input type="checkbox" id="lowercase" class="checkbox" checked />
-            <label for="Lowercase" class="checkbox-label">Lowercase</label>
+            <label for="lowercase" class="checkbox-label">Lowercase</label>
           </div>
           <div class="checkbox-container">
             <input type="checkbox" id="numbers" class="checkbox" checked />
-            <label for="Numbers" class="checkbox-label">Numbers</label>
+            <label for="numbers" class="checkbox-label">Numbers</label>
           </div>
           <div class="checkbox-container">
             <input type="checkbox" id="symbols" class="checkbox" checked />
-            <label for="Symbols" class="checkbox-label">Symbols</label>
+            <label for="symbols" class="checkbox-label">Symbols</label>
           </div>
         </div>
       </div>
@@ -101,5 +105,6 @@
       nomodule
       src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
     ></script>
+    <script src="./script.js"></script>
   </body>
 </html>
