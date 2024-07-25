@@ -1,0 +1,214 @@
+/* Color Variables */
+:root {
+  --primary-color-light: #4da1e9;
+  --primary-color-dark: #0178e0;
+  --primary-font-color: #333;
+  --secondary-font-color: #777;
+  --primary-background-color: #eee;
+  --secondary-background-color: #fff;
+  --box-shadow-main: #0000001a;
+  --box-shadow-sec: #0000004a;
+}
+
+/* Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Base Styles */
+html {
+  font-size: 62.5%;
+  font-family: "Rubik", sans-serif;
+}
+
+body {
+  color: var(--primary-font-color);
+  height: 100vh;
+  overflow-x: hidden;
+  font-weight: 400;
+  line-height: 1;
+}
+
+/* Header */
+header {
+  width: 100%;
+  background-color: var(--secondary-background-color);
+}
+
+header nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2.4rem;
+}
+
+.header-nav {
+  font-size: 2.4rem;
+  color: var(--primary-color-dark);
+}
+
+/* Icons */
+.menu-icon {
+  width: 3.2rem;
+  height: 3.2rem;
+}
+
+.copy-icon,
+.create-icon {
+  width: 2.4rem;
+  height: 2.4rem;
+}
+
+.create-icon {
+  margin-left: 1.2rem;
+}
+
+/* Main Content */
+main {
+  background-color: var(--primary-background-color);
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
+  padding-bottom: 2.4rem;
+}
+
+.title-container {
+  text-align: center;
+  padding: 3.2rem 0;
+}
+
+.main-title {
+  font-size: 4.4rem;
+}
+
+.sub-title {
+  font-size: 2.4rem;
+  line-height: 1.6;
+}
+
+/* Password Generator */
+.password-generator {
+  background-color: var(--secondary-background-color);
+  width: 80rem;
+  padding: 2.4rem;
+  border-radius: 1.2rem 1.2rem 0.4rem 0.4rem;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 3px solid var(--primary-color-light);
+  margin-bottom: 3.2rem;
+  box-shadow: 0 2.4rem 4.8rem var(--box-shadow-main);
+  -webkit-box-shadow: 0 2.4rem 4.8rem var(--box-shadow-main);
+  -moz-box-shadow: 0 2.4rem 4.8rem var(--box-shadow-main);
+}
+
+.password-input {
+  font-size: 1.6rem;
+  outline: none;
+  border: none;
+}
+
+/* Options */
+.options {
+  width: 80rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  row-gap: 1.2rem;
+  padding: 2.4rem;
+  background-color: var(--secondary-background-color);
+  border-radius: 0.4rem 0.4rem 1.2rem 1.2rem;
+  box-shadow: 0 2.4rem 4.8rem var(--box-shadow-main);
+  -webkit-box-shadow: 0 2.4rem 4.8rem var(--box-shadow-main);
+  -moz-box-shadow: 0 2.4rem 4.8rem var(--box-shadow-main);
+  margin-bottom: 2.4rem;
+}
+
+.options-heading {
+  grid-column: 1 / -1;
+  justify-self: center;
+  font-size: 2.4rem;
+  margin-bottom: 2.4rem;
+}
+
+.range-control {
+  align-self: center;
+  justify-self: center;
+}
+
+.range {
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+  margin-top: 1.6rem;
+}
+
+.password-options {
+  justify-self: center;
+}
+
+.range-label,
+.checkbox-label {
+  font-size: 1.6rem;
+}
+
+#range-value {
+  padding: 0.8rem 2.4rem;
+  font-size: 1.6rem;
+  border-radius: 0.2rem;
+  box-shadow: 0 0 0.4rem var(--box-shadow-sec);
+  -webkit-box-shadow: 0 0 0.4rem var(--box-shadow-sec);
+  -moz-box-shadow: 0 0 0.4rem var(--box-shadow-sec);
+}
+
+.checkbox-container {
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+  margin-bottom: 1.6rem;
+}
+
+.checkbox-container:last-child {
+  margin-bottom: 0;
+}
+
+.checkbox {
+  display: inline-block;
+  width: 2.4rem;
+  height: 2.4rem;
+  cursor: pointer;
+}
+
+/* Buttons */
+.copy-btn-main,
+.nav-copy-btn {
+  padding: 1.2rem 2.4rem;
+  font-size: 1.6rem;
+  background-color: var(--primary-color-dark);
+  border: none;
+  border-radius: 0.4rem;
+  color: var(--secondary-background-color);
+}
+
+.nav-copy-btn {
+  padding: 0.8rem 1.6rem;
+}
+
+/* Footer */
+footer {
+  margin-top: 3.2rem;
+  max-width: 120rem;
+  padding: 3.2rem;
+  text-align: center;
+}
+
+.footer-copy {
+  font-size: 1.6rem;
+}
+
+/* Container */
+.container {
+  max-width: 120rem;
+  padding: 0 3.2rem;
+  margin: 0 auto;
+}
