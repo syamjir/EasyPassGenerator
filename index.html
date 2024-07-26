@@ -4,9 +4,15 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>SafePass</title>
+    <link rel="icon" href="./locked-favicon.png" type="image/png" />
     <link
       href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&display=swap"
       rel="stylesheet"
+    />
+    <!-- Toastr CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css"
     />
     <link rel="stylesheet" href="style.css" />
   </head>
@@ -14,7 +20,7 @@
     <header class="container">
       <div class="menu-bar hidden">
         <a href="#" class="create-pass">Create pass</a>
-        <a href="#" class="footer-link">Footer</a>
+        <a href="#footer" class="footer-link">Footer</a>
       </div>
       <nav>
         <ion-icon
@@ -23,7 +29,7 @@
           aria-label="Menu"
         ></ion-icon>
         <h2 class="header-nav">SafePass</h2>
-        <button class="nav-copy-btn">Copy password</button>
+        <button class="nav-copy-btn btn-hover">Copy password</button>
       </nav>
     </header>
     <main>
@@ -40,17 +46,20 @@
           class="password-input"
           placeholder="SafePass here..."
           readonly
+          aria-label="Generated password"
         />
         <div>
           <ion-icon
             name="copy-outline"
             class="copy-icon"
             aria-label="Copy"
+            title="Copy"
           ></ion-icon>
           <ion-icon
             name="create-outline"
             class="create-icon"
             aria-label="Create"
+            title="Create"
           ></ion-icon>
         </div>
       </div>
@@ -59,7 +68,7 @@
         <div class="range-control">
           <label for="length" class="range-label">Password length</label>
           <div class="range">
-            <span id="range-value">8</span>
+            <span id="range-value">16</span>
             <input
               type="range"
               id="length"
@@ -67,33 +76,58 @@
               min="8"
               max="24"
               step="1"
+              aria-label="Password length"
             />
           </div>
         </div>
         <div class="password-options">
           <div class="checkbox-container">
-            <input type="checkbox" id="uppercase" class="checkbox" checked />
+            <input
+              type="checkbox"
+              id="uppercase"
+              class="checkbox"
+              checked
+              value="upperLetters"
+            />
             <label for="uppercase" class="checkbox-label">Uppercase</label>
           </div>
           <div class="checkbox-container">
-            <input type="checkbox" id="lowercase" class="checkbox" checked />
+            <input
+              type="checkbox"
+              id="lowercase"
+              class="checkbox"
+              checked
+              value="smallLetters"
+            />
             <label for="lowercase" class="checkbox-label">Lowercase</label>
           </div>
           <div class="checkbox-container">
-            <input type="checkbox" id="numbers" class="checkbox" checked />
+            <input
+              type="checkbox"
+              id="numbers"
+              class="checkbox"
+              checked
+              value="numbers"
+            />
             <label for="numbers" class="checkbox-label">Numbers</label>
           </div>
           <div class="checkbox-container">
-            <input type="checkbox" id="symbols" class="checkbox" checked />
+            <input
+              type="checkbox"
+              id="symbols"
+              class="checkbox"
+              checked
+              value="symbols"
+            />
             <label for="symbols" class="checkbox-label">Symbols</label>
           </div>
         </div>
       </div>
-      <button class="copy-btn-main">Copy password</button>
+      <button class="copy-btn-main btn-hover">Copy password</button>
     </main>
-    <footer>
+    <footer id="footer">
       <div class="footer-info">
-        <p class="footer-copy">&copy; 2024 I company. All rights reserved</p>
+        <p class="footer-copy">&copy; 2024 My Company. All rights reserved.</p>
       </div>
     </footer>
 
@@ -105,6 +139,10 @@
       nomodule
       src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
     ></script>
+    <!-- jQuery (required for Toastr) -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Toastr JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
     <script src="./script.js"></script>
   </body>
 </html>
