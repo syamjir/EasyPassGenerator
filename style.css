@@ -2,6 +2,7 @@
 :root {
   --primary-color-light: #4da1e9;
   --primary-color-dark: #0178e0;
+  --primary-hover: #0178dfe6;
   --primary-font-color: #333;
   --secondary-font-color: #777;
   --primary-background-color: #eee;
@@ -19,8 +20,9 @@
 
 /* Base Styles */
 html {
-  font-size: 62.5%;
+  font-size: 62.5%; /* 1rem = 10px */
   font-family: "Rubik", sans-serif;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -42,8 +44,36 @@ header nav {
   align-items: center;
   justify-content: space-between;
   padding: 2.4rem;
+  position: relative;
 }
 
+/* Menu Bar */
+.menu-bar {
+  display: inline-block;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  height: 6.4rem;
+  top: 7%;
+  left: 9%;
+}
+
+.menu-bar a {
+  display: inline-block;
+  cursor: pointer;
+  text-decoration: none;
+  padding: 0.8rem 1.6rem;
+  border-radius: 0.8rem 0.8rem 0 0;
+  font-size: 1.4rem;
+  background-color: var(--primary-color-dark);
+  color: var(--secondary-background-color);
+}
+
+.menu-bar a:hover {
+  background-color: var(--primary-color-light);
+}
+
+/* Navigation Header */
 .header-nav {
   font-size: 2.4rem;
   color: var(--primary-color-dark);
@@ -59,6 +89,7 @@ header nav {
 .create-icon {
   width: 2.4rem;
   height: 2.4rem;
+  position: relative;
 }
 
 .create-icon {
@@ -99,14 +130,14 @@ main {
   border-bottom: 3px solid var(--primary-color-light);
   margin-bottom: 3.2rem;
   box-shadow: 0 2.4rem 4.8rem var(--box-shadow-main);
-  -webkit-box-shadow: 0 2.4rem 4.8rem var(--box-shadow-main);
-  -moz-box-shadow: 0 2.4rem 4.8rem var(--box-shadow-main);
 }
 
 .password-input {
-  font-size: 1.6rem;
+  font-size: 1.8rem;
   outline: none;
   border: none;
+  width: 60%;
+  letter-spacing: 0.2rem;
 }
 
 /* Options */
@@ -119,8 +150,6 @@ main {
   background-color: var(--secondary-background-color);
   border-radius: 0.4rem 0.4rem 1.2rem 1.2rem;
   box-shadow: 0 2.4rem 4.8rem var(--box-shadow-main);
-  -webkit-box-shadow: 0 2.4rem 4.8rem var(--box-shadow-main);
-  -moz-box-shadow: 0 2.4rem 4.8rem var(--box-shadow-main);
   margin-bottom: 2.4rem;
 }
 
@@ -157,10 +186,9 @@ main {
   font-size: 1.6rem;
   border-radius: 0.2rem;
   box-shadow: 0 0 0.4rem var(--box-shadow-sec);
-  -webkit-box-shadow: 0 0 0.4rem var(--box-shadow-sec);
-  -moz-box-shadow: 0 0 0.4rem var(--box-shadow-sec);
 }
 
+/* Checkbox Container */
 .checkbox-container {
   display: flex;
   align-items: center;
@@ -188,6 +216,11 @@ main {
   border: none;
   border-radius: 0.4rem;
   color: var(--secondary-background-color);
+  cursor: pointer;
+}
+
+.btn-hover:hover {
+  background-color: var(--primary-hover);
 }
 
 .nav-copy-btn {
@@ -211,4 +244,42 @@ footer {
   max-width: 120rem;
   padding: 0 3.2rem;
   margin: 0 auto;
+}
+
+/* Tooltips */
+.copy-tooltip,
+.create-tooltip {
+  position: absolute;
+  padding: 0.8rem;
+  font-size: 1.6rem;
+  top: 32%;
+  left: 75%;
+  background-color: var(--primary-color-dark);
+  border-radius: 0.8rem 0.8rem 0.4rem 0.4rem;
+  box-shadow: 0 2.4rem 4.8rem var(--box-shadow-main);
+  color: var(--secondary-background-color);
+  transition: opacity 0.5s ease-in-out;
+}
+
+.create-tooltip {
+  left: 79%;
+}
+
+.hidden {
+  display: none;
+  opacity: 0;
+}
+
+.visible {
+  display: block;
+  opacity: 1;
+}
+
+/* Toastr Custom Styles */
+.toast-success {
+  background-color: var(--primary-color-dark) !important; /* Success color */
+}
+
+.toast-warning {
+  background-color: var(--primary-color-dark) !important; /* Warning color */
 }
