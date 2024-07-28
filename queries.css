@@ -21,9 +21,10 @@
     line-height: 1;
   }
   .copy-tooltip,
-.create-tooltip {
-  top: 58%;
-  left: 75%;
+  .create-tooltip {
+    top: 58%;
+    left: 75%;
+  }
 }
 @media (max-width: 43rem) {
   html {
